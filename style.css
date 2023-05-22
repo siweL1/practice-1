@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+  /* Медиа-запрос для адаптивности – когда ширина
+    экрана 650px или меньше, ссылки будут друг над другом */
+    @media screen and (max-width: 650px) {
+      * {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+      * {
+        float: none;
+      }
+    }
+/* Стиль шапки с серым фоном и отступами */
+.header {
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 10px 10px;
+    display: grid;
+    max-width: 100%;
+    background-color: #ffffff;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  /* Стиль ссылок шапки */
+  .header a {
+    float: right;
+    color: black;
+    text-align: right;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+  } 
+  
+  .search form { /* начало кнопки*/
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+    border: 0;
+    border-radius: 100px;
+    background: #CBF3F0;
+  }
+  .search input, button {
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  .search input {
+    width: 100%;
+    height: 42px;
+    padding-left: 15px;
+  }
+ .search button {
+    height: 42px;
+    width: 42px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    cursor: pointer;
+  }
+  .search button:before {
+    content: "\f002";
+    font-size: 16px;
+    color: #F9F0DA;
+  }   /* конец кнопки */
+
+  /* Изменение цвета фона при наведении курсора */
+  .header a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .modal { /* начало формы с баннером*/
+    width: 1065px;
+    height: 580px;
+    background: #FFFFFF;
+    border-radius: 26px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+
+ .form {
+    /* display: flex;
+    flex-direction: column; */
+    padding: 20px;
+    background-color: #2EC4B6;
+  } 
+
+  .order{ /* место с именем и номером */
+    display:flex ;
+    flex-flow: row nowrap;
+    /* flex-direction: column;
+    gap: 15px; */
+  }
+
+  .order_text { 
+    text-align:left ;
+    font-size: 40px;
+    padding: 0px 50px 50px 25px;
+  }
+  .order_text2 {
+    text-align:left ;
+    font-size: 30px;  
+    padding: 50px 50px 50px 25px;
+  }
+
+  .input_field1 {
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+  
+  .input_container {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: auto;
+    padding-right: 80px;
+  }
+  
+  .input_field {
+    width: auto;
+    height: 40px;
+    padding: 0 0 0 16px;
+    border-radius: 9px;
+    outline: none;
+    background-color: #F2F2F2;
+    border: 1px solid #e5e5e500;
+    transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+  }
+  
+  .input_field:focus {
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 0px 2px #2EC4B6;
+    background-color: transparent;
+  }
+  
+  .purchase--btn {
+    height: 55px;
+    width: 350px;
+    background: #F2F2F2;
+    border-radius: 11px;
+    border: 0;
+    margin: 0 auto;
+    margin-top: 50px;
+    outline: none;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 700;
+    background: #CBF3F0;
+    box-shadow: 0px 0px 0px 0px #FFFFFF, 0px 0px 0px 0px #000000;
+    transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+  }
+  
+  .purchase--btn:hover {
+    box-shadow: 0px 0px 0px 2px #FFFFFF, 0px 0px 0px 4px #0000003a;
+  }
+  
+  /* Reset input number styles хз че это */
+  .input_field::-webkit-outer-spin-button,
+  .input_field::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .input_field[type=number] {
+    -moz-appearance: textfield;
+  }
+
+  .categories { /* */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 20px;
+    align-content: space-around;
+    margin: 0 auto;
+    padding-top: 50px;
+    max-width: 100%;
+    justify-items: center;
+  }
+
+  .categories_item {
+    border: 5px solid #D9D9D9;
+    border-radius: 15px;
+    width: 235px;
+    height: 235px;
+    cursor: pointer;
+  }
+
+  .categories_item1 {
+    font-size: 130%;
+  }
+
+  .announcement_main {
+    float: center;
+    width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    padding-top: 20px;
+    justify-content: space-between;
+  }
+
+  .announcement {
+    max-width: 100%;
+}
+  .announcement_img {
+    width: 250px;
+    height: 250px;
+    margin-right: 10px;
+  }
+
+  .announcement_text {
+    font-size: 130%;
+    width: 500px;
+    height: 200px;
+  }
+
+  .announcement_maintext {
+    font-size: 200%;
+    font-weight: bold;
+  }
+
+  .announcement_oth { 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .con-like {
+    --red: #ee427b;
+    float: right;
+    justify-content:end ;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  
+  .con-like .like {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 20;
+    cursor: pointer;
+  }
+  
+  .con-like .checkmark {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .con-like .outline,
+  .con-like .filled {
+    fill: var(--red);
+    position: absolute;
+  }
+  
+  .con-like .filled {
+    animation: kfr-filled 0.5s;
+    display: none;
+  }
+  
+  .con-like .celebrate {
+    position: absolute;
+    animation: kfr-celebrate 0.5s;
+    animation-fill-mode: forwards;
+    display: none;
+  }
+  
+  .con-like .poly {
+    stroke: var(--red);
+    fill: var(--red);
+  }
+  
+  .con-like .like:checked ~ .checkmark .filled {
+    display: block
+  }
+  
+  .con-like .like:checked ~ .checkmark .celebrate {
+    display: block
+  }
+  
+  @keyframes kfr-filled {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+  
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
+  
+  @keyframes kfr-celebrate {
+    0% {
+      transform: scale(0);
+    }
+  
+    50% {
+      opacity: 0.8;
+    }
+  
+    100% {
+      transform: scale(1.2);
+      opacity: 0;
+      display: none;
+    }
+  } 
+
+  .announcement_button {
+    border: 1px solid #CBF3F0;
+    border-radius: 30px;
+    width: 300px;
+    height: 50px; 
+
+    background-color: #CBF3F0;
+    cursor: pointer;
+  }
+
+  .announcement_button_text {
+    font-size: 150%;
+  }
